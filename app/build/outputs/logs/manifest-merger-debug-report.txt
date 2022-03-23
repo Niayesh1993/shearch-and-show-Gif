@@ -1,0 +1,150 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-rc1] D:\envision-android-assignment\caches\transforms-2\files-2.1\08106d3ba9daa19d83acc26aa63c959b\constraintlayout-2.0.0-rc1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d0c32fc27a784fe9a85f1fd5fd283362\material-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.airbnb.android:lottie:3.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\50dc9d6de522c926b8afed608efe0c02\lottie-3.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dedfcffd70e7dcbaf3a747d4a18eb8a1\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\139eec32ee6d08a7e45180b53ad42cfc\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d5892270f8b7bfb85ec7c69a0f252ded\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8b88a282419310e8ac62c19f61328461\appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8688fed69513d2820156d5ab3df6e68b\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dddb8aa6005145f08e5bf984069f6177\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\cee7e66a8b2b5a20f2739718e752af9f\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\86a9d70bbeb6a8349dc6ad8f210b5de4\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\608738b90263a683c1201d0ade41ef0b\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\380f3c8b52d378d8bae59edbdf669110\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\6af26bcb6358fcc8b29aacb6a44aca6c\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4c1114fda9387171022beb3235e6e326\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\cc204e540fad35cdbbc628861b3bcad2\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\e51ef11c80057f1f12887394a0879760\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.3.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dc78eb7dfd54e450a262c81a00636a5b\core-1.3.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\b3263e1ece23b8597d81eda0e212e0bd\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\b93bd72b4062ca5e0babd488a63ff6af\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\544b02c83e60926a262faf18b65d2953\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c221310bd059865b52abf9b9ff9bb51c\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\eb29751b106ad6e693f0ed8a21267552\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\986eb2640d3790336447cb9597a0c0ec\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\9ff40d5cbe0f0ec55a636ad353228f20\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\ce2dfd986c35aa1b22ace91325e0de1f\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\6239448de57cda390c7d82bebf8429cb\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\765c9f3e952a7fef9bf5898f18dcc8c6\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\32996b6b5784eaea8a051e0df4803d22\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+	package
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:3:11-45
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:5:5-13:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-rc1] D:\envision-android-assignment\caches\transforms-2\files-2.1\08106d3ba9daa19d83acc26aa63c959b\constraintlayout-2.0.0-rc1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-rc1] D:\envision-android-assignment\caches\transforms-2\files-2.1\08106d3ba9daa19d83acc26aa63c959b\constraintlayout-2.0.0-rc1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d0c32fc27a784fe9a85f1fd5fd283362\material-1.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d0c32fc27a784fe9a85f1fd5fd283362\material-1.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.airbnb.android:lottie:3.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\50dc9d6de522c926b8afed608efe0c02\lottie-3.0.0\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\50dc9d6de522c926b8afed608efe0c02\lottie-3.0.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.3.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dc78eb7dfd54e450a262c81a00636a5b\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dc78eb7dfd54e450a262c81a00636a5b\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\544b02c83e60926a262faf18b65d2953\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\544b02c83e60926a262faf18b65d2953\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dc78eb7dfd54e450a262c81a00636a5b\core-1.3.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:10:13-39
+	android:label
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:8:13-45
+	android:roundIcon
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:9:13-52
+	android:icon
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:7:13-47
+	android:allowBackup
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:6:13-39
+	android:theme
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:11:13-44
+uses-sdk
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-rc1] D:\envision-android-assignment\caches\transforms-2\files-2.1\08106d3ba9daa19d83acc26aa63c959b\constraintlayout-2.0.0-rc1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-rc1] D:\envision-android-assignment\caches\transforms-2\files-2.1\08106d3ba9daa19d83acc26aa63c959b\constraintlayout-2.0.0-rc1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d0c32fc27a784fe9a85f1fd5fd283362\material-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d0c32fc27a784fe9a85f1fd5fd283362\material-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.airbnb.android:lottie:3.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\50dc9d6de522c926b8afed608efe0c02\lottie-3.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\50dc9d6de522c926b8afed608efe0c02\lottie-3.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dedfcffd70e7dcbaf3a747d4a18eb8a1\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dedfcffd70e7dcbaf3a747d4a18eb8a1\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\139eec32ee6d08a7e45180b53ad42cfc\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\139eec32ee6d08a7e45180b53ad42cfc\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d5892270f8b7bfb85ec7c69a0f252ded\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\d5892270f8b7bfb85ec7c69a0f252ded\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8b88a282419310e8ac62c19f61328461\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8b88a282419310e8ac62c19f61328461\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8688fed69513d2820156d5ab3df6e68b\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8688fed69513d2820156d5ab3df6e68b\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dddb8aa6005145f08e5bf984069f6177\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dddb8aa6005145f08e5bf984069f6177\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\cee7e66a8b2b5a20f2739718e752af9f\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\cee7e66a8b2b5a20f2739718e752af9f\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\86a9d70bbeb6a8349dc6ad8f210b5de4\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\86a9d70bbeb6a8349dc6ad8f210b5de4\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\608738b90263a683c1201d0ade41ef0b\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\608738b90263a683c1201d0ade41ef0b\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\380f3c8b52d378d8bae59edbdf669110\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\380f3c8b52d378d8bae59edbdf669110\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\6af26bcb6358fcc8b29aacb6a44aca6c\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\6af26bcb6358fcc8b29aacb6a44aca6c\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4c1114fda9387171022beb3235e6e326\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4c1114fda9387171022beb3235e6e326\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\cc204e540fad35cdbbc628861b3bcad2\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\cc204e540fad35cdbbc628861b3bcad2\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\e51ef11c80057f1f12887394a0879760\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\e51ef11c80057f1f12887394a0879760\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.3.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dc78eb7dfd54e450a262c81a00636a5b\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\dc78eb7dfd54e450a262c81a00636a5b\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\b3263e1ece23b8597d81eda0e212e0bd\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\b3263e1ece23b8597d81eda0e212e0bd\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\b93bd72b4062ca5e0babd488a63ff6af\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\b93bd72b4062ca5e0babd488a63ff6af\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\544b02c83e60926a262faf18b65d2953\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\544b02c83e60926a262faf18b65d2953\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c221310bd059865b52abf9b9ff9bb51c\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c221310bd059865b52abf9b9ff9bb51c\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\eb29751b106ad6e693f0ed8a21267552\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\eb29751b106ad6e693f0ed8a21267552\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\986eb2640d3790336447cb9597a0c0ec\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\986eb2640d3790336447cb9597a0c0ec\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\9ff40d5cbe0f0ec55a636ad353228f20\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\9ff40d5cbe0f0ec55a636ad353228f20\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\ce2dfd986c35aa1b22ace91325e0de1f\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\ce2dfd986c35aa1b22ace91325e0de1f\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\6239448de57cda390c7d82bebf8429cb\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\6239448de57cda390c7d82bebf8429cb\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\765c9f3e952a7fef9bf5898f18dcc8c6\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\765c9f3e952a7fef9bf5898f18dcc8c6\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\32996b6b5784eaea8a051e0df4803d22\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\32996b6b5784eaea8a051e0df4803d22\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
