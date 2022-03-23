@@ -4,7 +4,7 @@ ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
-MERGED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [:data] E:\picnic-android-Niayesh1993\data\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:presentation] E:\picnic-android-Niayesh1993\presentation\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.core:core-ktx:1.6.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\ebde85feffab94829a3c96bddb185d0f\jetified-core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
@@ -84,6 +84,8 @@ INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1
 		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:5:5-13:19
+MERGED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
+MERGED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
 MERGED from [com.google.android.material:material:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2a688e09e66fb5063b4eaaa6c0bb3a25\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2a688e09e66fb5063b4eaaa6c0bb3a25\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] D:\envision-android-assignment\caches\transforms-2\files-2.1\136f8a600d1cf76e88b66be2751bbdcb\constraintlayout-2.1.2\AndroidManifest.xml:9:5-20
@@ -260,6 +262,22 @@ INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
+activity#xyz.zohre.ui.MainActivity
+ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+	android:exported
+		ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-36
+	android:name
+		ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-53
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:27-74
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
 	android:exported

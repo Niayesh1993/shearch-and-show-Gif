@@ -28,31 +28,48 @@
 19        android:theme="@style/AppTheme" >
 19-->E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:11:13-44
 20        <activity
-20-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-21            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-21-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-22            android:exported="false"
-22-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-23            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-23-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-24
-25        <meta-data
-25-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5556b37fca6041227d562cfd47c76579\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-26            android:name="com.google.android.gms.version"
-26-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5556b37fca6041227d562cfd47c76579\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
-27            android:value="@integer/google_play_services_version" />
-27-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5556b37fca6041227d562cfd47c76579\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-28
-29        <provider
-29-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-30            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-30-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-31            android:authorities="com.example.minimoneybox.lifecycle-process"
-31-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-32            android:exported="false"
-32-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-33            android:multiprocess="true" />
-33-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-34    </application>
-35
-36</manifest>
+20-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+21            android:name="xyz.zohre.ui.MainActivity"
+21-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-53
+22            android:exported="true" >
+22-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-36
+23            <intent-filter>
+23-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-19:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-69
+24-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-77
+26-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:27-74
+27            </intent-filter>
+28        </activity>
+29        <activity
+29-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+30            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+30-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+31            android:exported="false"
+31-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+32            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+32-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+33
+34        <meta-data
+34-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5556b37fca6041227d562cfd47c76579\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+35            android:name="com.google.android.gms.version"
+35-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5556b37fca6041227d562cfd47c76579\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+36            android:value="@integer/google_play_services_version" />
+36-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5556b37fca6041227d562cfd47c76579\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+37
+38        <provider
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+40            android:authorities="com.example.minimoneybox.lifecycle-process"
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+41            android:exported="false"
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+42            android:multiprocess="true" />
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+43    </application>
+44
+45</manifest>
