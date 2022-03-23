@@ -1,37 +1,64 @@
-apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
-
-repositories {
-    google()
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id "org.jetbrains.kotlin.kapt"
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-android-extensions'
 }
 
+
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
     defaultConfig {
         applicationId "com.example.minimoneybox"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def buildType = variant.buildType.name
+            def versionName = defaultConfig.versionName
+            outputFileName = "Picnic-${versionName}-${buildType}.apk"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-rc1'
-    implementation 'com.google.android.material:material:1.2.0'
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.airbnb.android:lottie:3.0.0'
+    implementation dependenciesList.kotlinStdlib
+    implementation dependenciesList.kotlinKTX
+    implementation dependenciesList.appCompat
+    implementation dependenciesList.material
+    implementation dependenciesList.constraintlayout
+    implementation dependenciesList.lifecycleLiveData
+    implementation dependenciesList.lifecycleViewModel
+    implementation dependenciesList.playServicesLocation
+    implementation dependenciesList.multidex
+    implementation dependenciesList.hiltAndroid
+    implementation dependenciesList.coroutine
+    implementation project(path: ':domain')
+    kapt dependenciesList.hiltCompiler
+    testImplementation dependenciesList.junit
+    implementation project(path: ':data')
+    implementation project(path: ':presentation')
+    implementation project(path: ':ui')
 }
