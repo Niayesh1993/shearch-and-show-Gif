@@ -26,7 +26,7 @@ class GiphyApiModule {
         }
         val client = builder.build()
         return Retrofit.Builder()
-            .baseUrl("api.giphy.com")
+            .baseUrl("https://api.giphy.com")
             .addConverterFactory(
                 MoshiConverterFactory.create(
                     Moshi.Builder().add(KotlinJsonAdapterFactory()).build()

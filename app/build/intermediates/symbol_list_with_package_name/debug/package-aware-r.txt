@@ -1,4 +1,4 @@
-com.example.minimoneybox
+xyz.zohre.picnic
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1138,6 +1138,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color primary_black
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1163,6 +1164,7 @@ color test_mtrl_calendar_day_selected
 color text_button_primary
 color tooltip_background_dark
 color tooltip_background_light
+color transparent
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -1486,6 +1488,8 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen padding_size
+dimen radius
 dimen small_margin
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
@@ -1589,6 +1593,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_no_image
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1624,6 +1629,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_arrow_left_black
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_edit_black_24dp
@@ -1749,6 +1755,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backBtn
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1849,6 +1856,9 @@ id fragment_container_view_tag
 id frost
 id ghost_view
 id ghost_view_holder
+id gifImageView
+id gifTitle
+id gif_recycler
 id glide_custom_view_target_tag
 id gone
 id graph
@@ -1955,6 +1965,7 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id progressbar
 id radio
 id ratio
 id rectangles
@@ -1973,6 +1984,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -2046,6 +2058,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2168,6 +2181,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_random
 layout fragment_search
+layout gif_item
 layout layout_progress
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -2287,7 +2301,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string hello_blank_fragment
+string gif_title
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string mtrl_badge_numberless_content_description
@@ -2329,6 +2343,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string random_gif
 string remote_error
 string search_menu_title
 string status_bar_notification_info_overflow

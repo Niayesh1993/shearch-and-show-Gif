@@ -1,36 +1,30 @@
 package xyz.zohre.ui.random
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.load.resource.gif.GifDrawable
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_random.*
+import xyz.zohre.presentation.BaseFragment
+import xyz.zohre.presentation.bindImage
+import xyz.zohre.presentation.shortToast
 import xyz.zohre.ui.R
+import xyz.zohre.ui.search.GifRecyclerAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RandomGifFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 @AndroidEntryPoint
-class RandomGifFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class RandomGifFragment : BaseFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val viewModel: RandomGifViewModel by getLazyViewModel()
+    private val updateHandler = Handler(Looper.getMainLooper())
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,16 +34,74 @@ class RandomGifFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_random, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        initObservers()
+        initHandler()
+        viewModel.searchRandomGif()
+        progressbar.visibility = View.VISIBLE
+    }
+
+    private fun initHandler() {
+        val runnable = Runnable {
+            viewModel.searchRandomGif()
+        }
+        updateHandler.postDelayed(runnable, DELAY.toLong())
+    }
+
+    private fun initObservers() {
+        viewModel.randomGif.observe(
+            viewLifecycleOwner,
+            {
+                progressbar.visibility = View.GONE
+                gifTitle.text = it.gifData.title
+                bindImage(
+                    imageUrl = it.gifData.url,
+                    imageView = gifImageView,
+                    listener = object : RequestListener<GifDrawable> {
+                        override fun onLoadFailed(
+                            e: GlideException?,
+                            model: Any?,
+                            target: Target<GifDrawable>?,
+                            isFirstResource: Boolean,
+                        ): Boolean {
+                            return false
+                        }
+
+                        override fun onResourceReady(
+                            resource: GifDrawable?,
+                            model: Any?,
+                            target: Target<GifDrawable>?,
+                            dataSource: DataSource?,
+                            isFirstResource: Boolean,
+                        ): Boolean {
+                            return false
+                        }
+
+
+                    }
+                )
+            }
+        )
+        viewModel.loading.observe(
+            viewLifecycleOwner,
+            {
+                if (it) progressbar.visibility = View.VISIBLE
+            }
+        )
+        viewModel.showError.observe(
+            viewLifecycleOwner,
+            { event ->
+                event.getContentIfNotHandled()?.shortToast(this.requireView())
+                progressbar.visibility = View.GONE
+            }
+        )
+    }
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RandomFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+
+        private const val DELAY = 10000
         @JvmStatic
         fun newInstance() =
             RandomGifFragment().apply {
@@ -58,4 +110,5 @@ class RandomGifFragment : Fragment() {
                 }
             }
     }
+
 }

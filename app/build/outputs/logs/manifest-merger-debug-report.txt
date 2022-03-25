@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
-INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
-INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
-INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
 MERGED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [:data] E:\picnic-android-Niayesh1993\data\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:presentation] E:\picnic-android-Niayesh1993\presentation\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
@@ -65,25 +65,29 @@ MERGED from [androidx.print:print:1.0.0] D:\envision-android-assignment\caches\t
 MERGED from [androidx.interpolator:interpolator:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5b381c22030cfff38fa0fd4f8adbb055\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.40.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\b7db92c72156ab2396e0d068737d5e8d\dagger-lint-aar-2.40.1\AndroidManifest.xml:16:1-19:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\68bdbcef207ce0a80b97e9af9dc01c11\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
-INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
-INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
 	package
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:3:11-45
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:3:11-37
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-15:12
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
 		INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:5:5-13:19
+ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:7:5-17:19
 MERGED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
 MERGED from [:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-21:19
 MERGED from [com.google.android.material:material:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2a688e09e66fb5063b4eaaa6c0bb3a25\material-1.1.0\AndroidManifest.xml:22:5-20
@@ -115,17 +119,21 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] D:\envision-android-as
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\0added2168b7a00dc87e927bf7ccce91\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:10:13-39
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:13:13-39
 	android:label
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:8:13-45
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:11:13-45
 	android:roundIcon
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:9:13-52
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:12:13-52
 	android:icon
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:7:13-47
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:10:13-47
 	android:allowBackup
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:6:13-39
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:9:13-39
 	android:theme
-		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:11:13-44
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:15:13-44
+	android:usesCleartextTraffic
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:14:13-48
+	android:name
+		ADDED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:8:13-45
 uses-sdk
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml

@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.Response
 import xyz.zohre.data.discovery.GifDataSource
 import xyz.zohre.data.model.Giphy
+import xyz.zohre.data.model.RandomGiphy
 import xyz.zohre.domain.DefaultDispatcher
 import xyz.zohre.domain.IoDispatcher
 import xyz.zohre.domain.entities.ApiResult
@@ -22,8 +23,8 @@ class RandomGifRepositoryImpl@Inject constructor(
     val ioDispatcher: CoroutineDispatcher
 ): RandomGifRepository
 {
-    override suspend fun execute(): Flow<ApiResult<Giphy>> {
-        var remoteResponse: Response<Giphy>? = null
+    override suspend fun execute(parameters: Any): Flow<ApiResult<RandomGiphy>> {
+        var remoteResponse: Response<RandomGiphy>? = null
         return flow {
             // start async request so we could use network while we loading from cache
             val remoteDeferred = CoroutineScope((ioDispatcher)).async {

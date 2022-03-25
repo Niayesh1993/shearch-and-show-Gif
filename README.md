@@ -1,80 +1,108 @@
-# Picnic Recruitment Task #
-
-Please read the following instructions carefully and make sure that you fulfil
-all requirements listed.
-
-## Overview ##
-
-This is an Android programming assignment we've created specifically for our
-recruitment process.
-You were given a link to GitHub, which when you visited that link,
-created a private fork of this repository. Only you and developers at Picnic
-can see the code you push to this repository.
-
-High-level instructions:
-1. Read and follow the task specified below.
-2. Make a local clone of this repository on your machine, and do your work on a
-   branch other than `master`. Do not make any changes to the `master` branch.
-3. Push your changes as frequently as you like to `origin/your-branch-name`,
-   and create a pull request to merge your changes back into the `master`
-   branch. Don't merge your pull request. Once you're finished with the
-   assignment, we will do a code review of your pull request.
-4. When you're finished, [create and add][github-labels] the label `done` to
-   your pull request. This will notify us that your code is ready to be
-   reviewed. Please do **NOT** publish your solution on a publicly available
-   location (such as a public GitHub repository, your personal website, _et
-   cetera_).
-
-This process closely mimics our actual development and review cycle. We hope
-you enjoy it!
-
-## Task ##
-
-We would like you to write code that will cover the functionality listed below and provide us with the source as well as the output of an Android app that consists of two screens:
-
-![Wireframe][wireframe-image]
-
-### Screen 1:
-Screen 1 has the following two functionalities:
-
-1. Displaying a random GIF:
-    * Upon opening the app, it should connect to the Giphy random API and display a random GIF as displayed in **Fig 1**.
-    * The random GIF displayed on this screen should be animated.
-    * Every 10 seconds a new random GIF should replace the previous loaded one. This should continue as long as the user has no search results displayed.
-    * **Screen 1** should also display the GIF title, link and an age restriction badge.
-2. Search Bar:
-    * Upon clicking the search bar, we start a live search after characters have been entered. This means that once the user has typed two characters, the search API should be called and not wait until the user pressed search.
-    * The returning results should be displayed as shown in **Fig 2**. The GIFs’ in the search results do not have to be animated and the list doesn’t have to include infinite scrolling.
-    * Tapping one of the list items should navigate the user to **Screen 2**.
-    * This screen should be able to retain its state, in case the user navigates back to it from **Screen 2**.
-    * On press of the back button, the screen should go back to displaying the random GIF.
-
-### Screen 2:
-Screen 2 only has the following functionality:
-1. Displaying the GIF that was tapped:
-    * On **Screen 2** the tapped GIF should be displayed animated along with the title, link and age restriction badge as displayed in **Fig 3**.
-    * Upon tapping the back button, the user should be taken back to **Screen 1**.
-
-### Useful information:
-* API Documentation: https://developers.giphy.com/docs/
-* Use the following API Key: `ZY2avPUSjnFFy0FcjbTLpKNHfAdJD9Vt`
-* Please, **DO NOT** use Giphy SDK https://github.com/Giphy/giphy-android-sdk-ui-example
-
-### Extras:
-* It’s okay to use any third party libraries you seem fit, but please attach a brief description of why you’ve selected it.
-* The app should be written in either Java or Kotlin.
-* Please also provide a brief description of the overall app architecture and the reasoning behind picking it over any other possible alternative.
-
-### Grading Criteria:
-You will be assessed on the following criteria:
-* Architecture and approach
-* Execution
-* Testability
-* Code readability and style
-* Usage of git
+Interview Test App
+======================
 
 
-_Thanks in advance for your time and interest in Picnic!_
+## Prerequisites
 
-[wireframe-image]: https://imgur.com/r72vQbz.png
-[github-labels]: https://help.github.com/articles/about-labels
+In order to run this project you need the following:
+- Android Studio 4.1.0 or better
+- Gradle 6.5 or better
+- JDK 1.8
+- [Android SDK](https://developer.android.com/studio/index.html)
+
+
+
+# Architecture
+
+The project implemented with
+[MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+and [The Clean Architecture](https://developer.foursquare.com/docs/places-api/getting-started/])
+
+## Domain
+We have repository and entities here I didn't implement UseCase or Interact to
+reduce boilerplate codes. Adding UseCases is okay, if we know we have lots of pure
+logic implementation or we want to have some kind of Interacts and share logic
+between different modules but in this case we don't have enough evidence for that.
+The entity keyword has been used as a suffix to describe data classes in domain
+
+**Downside:** using repository interface instead of abstract class cause things like coroutine dispatcher
+and execute function are visible for feature level modules.
+
+
+### Refactor Strategy:
+
+Put all domain level logic in a function when input received by both ViewModel
+and repository.
+later if we find out we have lots of domain level logic we could add this layer easily.
+
+## Data
+
+We have repository and data source implementations.
+Also we have our models for network with Response and Request suffix.
+Creating different models for data layers cause lots of boilerplate but we can develop tools to
+generate that automatically. If we don't have time we could use entity models. In my experience
+importing some android related SDKs to domain layer cause other careless import and make testing hard.
+We could also control it with lints and merge request templates for review.
+
+**Note:** I've used retrofit interface as DataSource. We could create another layer here but it's
+possible we violate YANG principle in lots of scenarios.
+
+**Advantage:** we can easily change our data models and change API or migrate to other technologies
+like GRPC. In this scenario we have
+
+### Refactor Strategy:
+
+We can set some guidelines in the beginning.
+So later if we develop a tool for that we would migrate easily and without change to domain layer entities
+
+
+
+## Ui Modules
+
+With this strategy we reduce build time in long term and in CI/CD.
+We avoid unwanted access to other features class and we can review more effectively. and later if we want have different apps.
+
+**Note:** We should change our dependency direction with the app module
+if we want to have Instant app with Android App Bundle.
+BTW it seems that it's not hard to refactor this type to that.
+
+## Presentation Module
+
+We could implement shared view related classes and themes here.
+Also, we could start our design system here before we make a different module for that.
+
+
+# Technologies And Decisions
+
+In this section I'll try to explain reason behind some of my decisions
+
+## Hilt
+
+We Use hilt because of less boilerplate codes. Also, generally I think it's easier for integration tests as well.
+
+For ViewModel injection there's alpha library from google
+that I'm not sure if it's stable or not.
+So I've used some boilerplate codes but we can easily refactor to use that library
+
+**Create Hilt modules in the related gradle modules:**
+This scenario could help us, if we want to reuse our gradle modules in different apps or
+if we don't want to mock them in some integration tests.
+
+**Create Hilt modules in the app module:**
+This scenario is easier to test for component testing but it needs more boilerplate codes.
+
+
+## Coroutine and Flow
+
+For the threading and observing I could use technologies like Livedata with Thread pools, Rx and Coroutine.
+
+It's hard to handle things like back pressure
+or debounce with Livedata and ThreadPools.
+
+On the other hand, Coroutine is lighter than Rx. It's native and somehow
+it's easier to test because Google has created some libraries for that.
+
+
+## UX
+
+I keep UI minimal and tried to show I know how to use things like constraint layout, styles, dimens drawables, etc, but I know from the user side it's not good at all.

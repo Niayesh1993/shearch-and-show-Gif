@@ -5,30 +5,35 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DefaultItemAnimator
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.load.resource.gif.GifDrawable
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_random.*
+import kotlinx.android.synthetic.main.fragment_search.*
+import kotlinx.android.synthetic.main.fragment_search.progressbar
+import xyz.zohre.presentation.BaseFragment
+import xyz.zohre.presentation.bindImage
+import xyz.zohre.presentation.shortToast
 import xyz.zohre.ui.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SearchGifFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+private const val SEARCH_QUERY = "param1"
+
 @AndroidEntryPoint
-class SearchGifFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class SearchGifFragment : BaseFragment() {
+
+    private var query: String? = null
+    private val viewModel: SearchGifViewModel by getLazyViewModel()
+    private val adapter = GifRecyclerAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            query = it.getString(SEARCH_QUERY)
         }
     }
 
@@ -40,21 +45,48 @@ class SearchGifFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_search, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        gif_recycler.adapter = adapter
+        gif_recycler.itemAnimator = DefaultItemAnimator()
+
+        query?.let { viewModel.searchGif(it) }
+        progressbar.visibility = View.VISIBLE
+
+    }
+
+    private fun initObservers() {
+        viewModel.gifs.observe(
+            viewLifecycleOwner,
+            {
+                progressbar.visibility = View.GONE
+                adapter.insertItems(it)
+            }
+        )
+        viewModel.loading.observe(
+            viewLifecycleOwner,
+            {
+                if (it) progressbar.visibility = View.VISIBLE
+            }
+        )
+        viewModel.showError.observe(
+            viewLifecycleOwner,
+            { event ->
+                event.getContentIfNotHandled()?.shortToast(this.requireView())
+                progressbar.visibility = View.GONE
+            }
+        )
+    }
+
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SearchFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
-        fun newInstance() =
+        fun newInstance(param: String?) =
             SearchGifFragment().apply {
                 arguments = Bundle().apply {
-
+                   this.putString(SEARCH_QUERY, param)
                 }
             }
     }

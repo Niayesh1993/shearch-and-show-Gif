@@ -2,7 +2,7 @@ package xyz.zohre.data.model
 
 import com.squareup.moshi.Json
 
-data class Data(
+data class GifData(
     @Json(name = "type") val type : String,
     @Json(name = "id") val id : String,
     @Json(name = "url") val url : String,
@@ -22,6 +22,6 @@ data class Data(
     @Json(name = "trending_datetime") val trending_datetime : String,
     @Json(name = "images") val images : Images,
     @Json(name = "user") val user : User,
-    @Json(name = "analytics_response_payload") val analytics_response_payload : String,
-    @Json(name = "analytics") val analytics : Analytics
+    @Json(name = "analytics_response_payload") val analytics_response_payload : String?,
+    @Json(name = "analytics") val analytics : Analytics?
 )

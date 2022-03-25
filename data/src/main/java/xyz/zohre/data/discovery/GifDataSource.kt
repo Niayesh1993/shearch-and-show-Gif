@@ -4,6 +4,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 import xyz.zohre.data.model.Giphy
+import xyz.zohre.data.model.RandomGiphy
 
 interface GifDataSource {
 
@@ -14,7 +15,7 @@ interface GifDataSource {
     @GET("/v1/gifs/random")
     suspend fun randomGif(
         @Query("api_key") api_key: String = API_KEY
-    ): Response<Giphy>
+    ): Response<RandomGiphy>
 
     @GET("/v1/gifs/search")
     suspend fun searchGif(

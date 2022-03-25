@@ -18,7 +18,7 @@ data class Images(
     @Json(name = "fixed_width_downsampled") val fixed_width_downsampled : FixedHeightDownSampled,
     @Json(name = "fixed_width_small") val fixed_width_small : FixedHeight,
     @Json(name = "fixed_width_small_still") val fixed_width_small_still : Downsized,
-    @Json(name = "fixed_width_still") val fixed_width_still : FixedHeight,
+    @Json(name = "fixed_width_still") val fixed_width_still : Downsized,
     @Json(name = "looping") val looping : Looping,
     @Json(name = "original_still") val original_still : Downsized,
     @Json(name = "original_mp4") val original_mp4 : DownsizedSmall,
