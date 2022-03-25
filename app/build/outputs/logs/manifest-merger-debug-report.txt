@@ -22,7 +22,7 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] D:\envision-android-a
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\1b75d2b5a6b8cf3acd43fe4091be083a\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\baa206135380e27a707388c507deb6a1\transition-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c1f3ba165d466e6baf233b1571a4d5c5\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2f7599e2bb9785c7197da5dbac54d1f5\jetified-glide-4.12.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.bumptech.glide:glide:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4546ddc71c965a029b6e3bd4fa737c6a\glide-4.13.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c701ce3cc9ffcc8cf3ec04f288d5784c\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\f9435b8f0f0766428fb04e20d385b8ac\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\f2a34cfd4773c77441ac7c60b2e90780\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -56,7 +56,7 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] D:\envision-android-ass
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\76b3a98908e07432bc091d5b97d8c890\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\eac64fbaffbc9214ede9ca182a93e24d\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.tracing:tracing:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\38fb84f530bf946073b78d9bc83fdf10\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8e95d63f7c77a57696a5f9e11652c306\jetified-gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8157f475e0ed764d9f85d620ae1edd83\gifdecoder-4.13.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4dea5eb093e85eaa70b822d468d0b6e7\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\21f9458c2036f9086b986482914829da\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2c64983273549400009ca9c6e4a20c65\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -64,7 +64,9 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\envi
 MERGED from [androidx.print:print:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\54815eaa57868e081ab13e05a08d7db6\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5b381c22030cfff38fa0fd4f8adbb055\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.40.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\b7db92c72156ab2396e0d068737d5e8d\dagger-lint-aar-2.40.1\AndroidManifest.xml:16:1-19:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.22] D:\envision-android-assignment\caches\transforms-2\files-2.1\c5713a0cd05dcf9431a19e74ccce46b0\android-gif-drawable-1.2.22\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\68bdbcef207ce0a80b97e9af9dc01c11\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [pl.droidsonroids.relinker:relinker:1.4.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\dcf1fa7c64f541afffee4ec0f445330a\relinker-1.4.1\AndroidManifest.xml:2:1-7:12
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml:2:1-19:12
@@ -96,8 +98,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] D:\envision-andro
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] D:\envision-android-assignment\caches\transforms-2\files-2.1\136f8a600d1cf76e88b66be2751bbdcb\constraintlayout-2.1.2\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-location:18.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\77bd7c2b6ce71ce996b48353191b5d71\jetified-play-services-location-18.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:18.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\77bd7c2b6ce71ce996b48353191b5d71\jetified-play-services-location-18.0.0\AndroidManifest.xml:7:5-20
-MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2f7599e2bb9785c7197da5dbac54d1f5\jetified-glide-4.12.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2f7599e2bb9785c7197da5dbac54d1f5\jetified-glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4546ddc71c965a029b6e3bd4fa737c6a\glide-4.13.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4546ddc71c965a029b6e3bd4fa737c6a\glide-4.13.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\78e03f28f6b061c9adb33fd1b7aff6f7\jetified-play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\79a6cf62e162a4bf31df734a77c271be\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
@@ -114,8 +116,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-ass
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\689b4a6b540cfa87fbee7f76d74fbc16\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\76b3a98908e07432bc091d5b97d8c890\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\76b3a98908e07432bc091d5b97d8c890\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8e95d63f7c77a57696a5f9e11652c306\jetified-gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8e95d63f7c77a57696a5f9e11652c306\jetified-gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8157f475e0ed764d9f85d620ae1edd83\gifdecoder-4.13.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8157f475e0ed764d9f85d620ae1edd83\gifdecoder-4.13.0\AndroidManifest.xml:9:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\0added2168b7a00dc87e927bf7ccce91\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
@@ -174,8 +176,8 @@ MERGED from [androidx.transition:transition:1.2.0] D:\envision-android-assignmen
 MERGED from [androidx.transition:transition:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\baa206135380e27a707388c507deb6a1\transition-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c1f3ba165d466e6baf233b1571a4d5c5\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c1f3ba165d466e6baf233b1571a4d5c5\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2f7599e2bb9785c7197da5dbac54d1f5\jetified-glide-4.12.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\2f7599e2bb9785c7197da5dbac54d1f5\jetified-glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4546ddc71c965a029b6e3bd4fa737c6a\glide-4.13.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4546ddc71c965a029b6e3bd4fa737c6a\glide-4.13.0\AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c701ce3cc9ffcc8cf3ec04f288d5784c\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\c701ce3cc9ffcc8cf3ec04f288d5784c\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\f9435b8f0f0766428fb04e20d385b8ac\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -242,8 +244,8 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\envision-android-assignme
 MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\eac64fbaffbc9214ede9ca182a93e24d\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\38fb84f530bf946073b78d9bc83fdf10\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\38fb84f530bf946073b78d9bc83fdf10\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8e95d63f7c77a57696a5f9e11652c306\jetified-gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8e95d63f7c77a57696a5f9e11652c306\jetified-gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8157f475e0ed764d9f85d620ae1edd83\gifdecoder-4.13.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\8157f475e0ed764d9f85d620ae1edd83\gifdecoder-4.13.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4dea5eb093e85eaa70b822d468d0b6e7\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\4dea5eb093e85eaa70b822d468d0b6e7\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\21f9458c2036f9086b986482914829da\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
@@ -258,8 +260,12 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] D:\envision-android-assig
 MERGED from [androidx.interpolator:interpolator:1.0.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\5b381c22030cfff38fa0fd4f8adbb055\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.dagger:dagger-lint-aar:2.40.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\b7db92c72156ab2396e0d068737d5e8d\dagger-lint-aar-2.40.1\AndroidManifest.xml:18:3-42
 MERGED from [com.google.dagger:dagger-lint-aar:2.40.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\b7db92c72156ab2396e0d068737d5e8d\dagger-lint-aar-2.40.1\AndroidManifest.xml:18:3-42
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.22] D:\envision-android-assignment\caches\transforms-2\files-2.1\c5713a0cd05dcf9431a19e74ccce46b0\android-gif-drawable-1.2.22\AndroidManifest.xml:5:5-7:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.22] D:\envision-android-assignment\caches\transforms-2\files-2.1\c5713a0cd05dcf9431a19e74ccce46b0\android-gif-drawable-1.2.22\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\68bdbcef207ce0a80b97e9af9dc01c11\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\68bdbcef207ce0a80b97e9af9dc01c11\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [pl.droidsonroids.relinker:relinker:1.4.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\dcf1fa7c64f541afffee4ec0f445330a\relinker-1.4.1\AndroidManifest.xml:5:5-43
+MERGED from [pl.droidsonroids.relinker:relinker:1.4.1] D:\envision-android-assignment\caches\transforms-2\files-2.1\dcf1fa7c64f541afffee4ec0f445330a\relinker-1.4.1\AndroidManifest.xml:5:5-43
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 INJECTED from E:\picnic-android-Niayesh1993\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion

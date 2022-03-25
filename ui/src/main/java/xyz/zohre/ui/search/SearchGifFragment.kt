@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.gif.GifDrawable
@@ -16,7 +17,6 @@ import kotlinx.android.synthetic.main.fragment_random.*
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.progressbar
 import xyz.zohre.presentation.BaseFragment
-import xyz.zohre.presentation.bindImage
 import xyz.zohre.presentation.shortToast
 import xyz.zohre.ui.R
 
@@ -50,7 +50,9 @@ class SearchGifFragment : BaseFragment() {
 
         gif_recycler.adapter = adapter
         gif_recycler.itemAnimator = DefaultItemAnimator()
-
+        val gridLayoutManager = GridLayoutManager(activity?.applicationContext, 3)
+        gif_recycler.layoutManager = gridLayoutManager
+        initObservers()
         query?.let { viewModel.searchGif(it) }
         progressbar.visibility = View.VISIBLE
 

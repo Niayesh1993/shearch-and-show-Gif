@@ -1,5 +1,6 @@
 package xyz.zohre.ui.search
 
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,22 +26,22 @@ class GifRecyclerAdapter: BaseRecyclerAdapter<GifData,
         : BaseViewHolder<GifData>(itemView, adapter){
         override fun bind(t: GifData) {
             bindImage(
-                imageUrl = t.bitly_gif_url,
+                imageUrl = t.images.fixed_width_small_still.url,
                 imageView = itemView.gifImageView,
-                listener = object : RequestListener<GifDrawable> {
+                listener = object : RequestListener<Drawable> {
                     override fun onLoadFailed(
                         e: GlideException?,
                         model: Any?,
-                        target: Target<GifDrawable>?,
+                        target: Target<Drawable>?,
                         isFirstResource: Boolean,
                     ): Boolean {
                         return false
                     }
 
                     override fun onResourceReady(
-                        resource: GifDrawable?,
+                        resource: Drawable?,
                         model: Any?,
-                        target: Target<GifDrawable>?,
+                        target: Target<Drawable>?,
                         dataSource: DataSource?,
                         isFirstResource: Boolean,
                     ): Boolean {
@@ -53,7 +54,6 @@ class GifRecyclerAdapter: BaseRecyclerAdapter<GifData,
         }
 
     }
-
     override fun viewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent?.context).inflate(

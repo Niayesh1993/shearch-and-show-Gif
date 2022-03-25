@@ -43,7 +43,7 @@ class SearchGifViewModel@Inject constructor(val searchGifRepository: SearchGifRe
             is ApiResult.Success -> {
                 _gifs.value = result.data.data
             }
-            ApiResult.Loading -> {
+            is ApiResult.Loading -> {
                 _loading.value = true
 
             }

@@ -1,5 +1,6 @@
 package xyz.zohre.ui.random
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.load.resource.gif.GifDrawable
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import dagger.hilt.android.AndroidEntryPoint
@@ -17,13 +17,13 @@ import xyz.zohre.presentation.BaseFragment
 import xyz.zohre.presentation.bindImage
 import xyz.zohre.presentation.shortToast
 import xyz.zohre.ui.R
-import xyz.zohre.ui.search.GifRecyclerAdapter
 
 @AndroidEntryPoint
 class RandomGifFragment : BaseFragment() {
 
     private val viewModel: RandomGifViewModel by getLazyViewModel()
     private val updateHandler = Handler(Looper.getMainLooper())
+    private var runnable: Runnable? = null
 
 
     override fun onCreateView(
@@ -38,16 +38,15 @@ class RandomGifFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initObservers()
-        initHandler()
         viewModel.searchRandomGif()
         progressbar.visibility = View.VISIBLE
     }
 
     private fun initHandler() {
-        val runnable = Runnable {
+        updateHandler.postDelayed(Runnable {
+            updateHandler.postDelayed(runnable!!, DELAY.toLong())
             viewModel.searchRandomGif()
-        }
-        updateHandler.postDelayed(runnable, DELAY.toLong())
+        }.also { runnable = it }, DELAY.toLong())
     }
 
     private fun initObservers() {
@@ -56,23 +55,24 @@ class RandomGifFragment : BaseFragment() {
             {
                 progressbar.visibility = View.GONE
                 gifTitle.text = it.gifData.title
+                gifLink.text = it.gifData.images.fixed_height_downsampled.url
                 bindImage(
-                    imageUrl = it.gifData.url,
+                    imageUrl = it.gifData.images.fixed_height_downsampled.url,
                     imageView = gifImageView,
-                    listener = object : RequestListener<GifDrawable> {
+                    listener = object : RequestListener<Drawable> {
                         override fun onLoadFailed(
                             e: GlideException?,
                             model: Any?,
-                            target: Target<GifDrawable>?,
+                            target: Target<Drawable>?,
                             isFirstResource: Boolean,
                         ): Boolean {
                             return false
                         }
 
                         override fun onResourceReady(
-                            resource: GifDrawable?,
+                            resource: Drawable?,
                             model: Any?,
-                            target: Target<GifDrawable>?,
+                            target: Target<Drawable>?,
                             dataSource: DataSource?,
                             isFirstResource: Boolean,
                         ): Boolean {
@@ -99,6 +99,16 @@ class RandomGifFragment : BaseFragment() {
         )
     }
 
+    override fun onResume() {
+        super.onResume()
+        initHandler()
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        updateHandler.removeCallbacks(runnable!!)
+    }
     companion object {
 
         private const val DELAY = 10000

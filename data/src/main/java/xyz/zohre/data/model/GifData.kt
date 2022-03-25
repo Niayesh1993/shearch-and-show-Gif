@@ -21,7 +21,7 @@ data class GifData(
     @Json(name = "import_datetime") val import_datetime : String,
     @Json(name = "trending_datetime") val trending_datetime : String,
     @Json(name = "images") val images : Images,
-    @Json(name = "user") val user : User,
+    @Json(name = "user") val user : User?,
     @Json(name = "analytics_response_payload") val analytics_response_payload : String?,
     @Json(name = "analytics") val analytics : Analytics?
 )

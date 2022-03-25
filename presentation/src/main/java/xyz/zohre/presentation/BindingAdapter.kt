@@ -1,5 +1,6 @@
 package xyz.zohre.presentation
 
+import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -25,13 +26,12 @@ fun bindImage(
     crossFade: Boolean? = false,
     overrideWidth: Int? = null,
     overrideHeight: Int? = null,
-    listener: RequestListener<GifDrawable>? = null
+    listener: RequestListener<Drawable>? = null
 ) {
 
     val withContext = Glide.with(imageView.context)
     val request = if (!imageUrl.isNullOrBlank()) {
         withContext
-            .asGif()
             .load("""$imageUrl""")
             .error(R.drawable.bg_no_image)
             .also {

@@ -41,7 +41,7 @@ class RandomGifViewModel@Inject constructor(val randomGifRepository: RandomGifRe
             is ApiResult.Success -> {
                 _randomGif.value = result.data
             }
-            ApiResult.Loading -> {
+            is ApiResult.Loading -> {
                 _loading.value = true
 
             }

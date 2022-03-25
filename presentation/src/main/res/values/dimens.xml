@@ -3,5 +3,7 @@
     <dimen name="normal_margin">12dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="padding_size">5dp</dimen>
-    <dimen name="radius">25dp</dimen>
+    <dimen name="radius">5dp</dimen>
+    <dimen name="header">16sp</dimen>
+    <dimen name="label">14sp</dimen>
 </resources>
