@@ -1,7 +1,10 @@
 package xyz.zohre.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Original(
     @Json(name = "height") val height : Int,
     @Json(name = "width") val width : Int,
@@ -13,4 +16,4 @@ data class Original(
     @Json(name = "webp") val webp : String,
     @Json(name = "frames") val frames : Int,
     @Json(name = "hash") val hash : String
-)
+): Parcelable

@@ -12,7 +12,7 @@
         app:cardPreventCornerOverlap="false"
         app:cardCornerRadius="@dimen/radius"
         android:layout_margin="@dimen/small_margin"
-        android:background="@color/primary_blue"
+        android:background="@color/tail_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

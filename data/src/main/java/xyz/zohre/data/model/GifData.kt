@@ -1,7 +1,10 @@
 package xyz.zohre.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class GifData(
     @Json(name = "type") val type : String,
     @Json(name = "id") val id : String,
@@ -24,4 +27,4 @@ data class GifData(
     @Json(name = "user") val user : User?,
     @Json(name = "analytics_response_payload") val analytics_response_payload : String?,
     @Json(name = "analytics") val analytics : Analytics?
-)
+): Parcelable

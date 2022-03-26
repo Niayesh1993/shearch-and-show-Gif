@@ -1,6 +1,7 @@
 package xyz.zohre.presentation.adapter;
 
 
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -12,15 +13,20 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extends BaseViewHolder.OnItemClickListener<M>> extends RecyclerView.Adapter<VH> {
+public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P extends BaseViewHolder.OnItemClickListener<M>> extends RecyclerView.Adapter<VH> {
 
     private final static int PROGRESS_TYPE = 2017;
 
     @NonNull
-    private final List<M> data;
+    private List<M> data;
     @Nullable
-    private final P listener;
+    private P listener;
     private int lastKnowingPosition = -1;
+    private boolean enableAnimation = false;
+    private boolean showedGuide;
+    private GuideListener guideListener;
+    private boolean progressAdded;
+    private int rowWidth;
 
     protected BaseRecyclerAdapter() {
         this(new ArrayList<>());
@@ -30,23 +36,36 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extend
         this(data, null);
     }
 
-    protected BaseRecyclerAdapter(@NonNull List<M> data,
-                                  @Nullable P listener) {
+    protected BaseRecyclerAdapter(@NonNull List<M> data, @Nullable P listener) {
         this.data = data;
         this.listener = listener;
     }
 
+    protected BaseRecyclerAdapter(@Nullable P listener) {
+        this(new ArrayList<>(), listener);
+    }
+
     protected abstract VH viewHolder(ViewGroup parent, int viewType);
 
-    protected abstract void onBindView(VH holder, int position);
+    protected void onBindView(VH holder, int position){
+        holder.bind(data.get(position));
+    }
 
     @NonNull
     public List<M> getData() {
         return data;
     }
 
+    public M getItemByPosition(int position) {
+        return data.get(position);
+    }
+
     public M getItem(int position) {
         return data.get(position);
+    }
+
+    public int getItem(M t) {
+        return data.indexOf(t);
     }
 
     @SuppressWarnings("unchecked")
@@ -69,8 +88,9 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extend
                 layoutParams.setFullSpan(true);
             }
         } else if (getItem(position) != null) {
-            animate(position);
+            animate(holder, position);
             onBindView(holder, position);
+            onShowGuide(holder, position);
         }
     }
 
@@ -87,9 +107,29 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extend
         return data.size();
     }
 
+    @Override
+    public void onViewDetachedFromWindow(@NonNull VH holder) {
+        holder.onViewIsDetaching();
+        super.onViewDetachedFromWindow(holder);
+    }
 
-    private void animate(int position) {
+    @Override
+    public void onViewRecycled(@NonNull VH holder) {
+        super.onViewRecycled(holder);
+    }
+
+    @SuppressWarnings("unchecked")
+    private void onShowGuide(@NonNull VH holder, int position) {
+        // give the flexibility to other adapters to override this
+        if (position == 0 && !isShowedGuide() && guideListener != null) {
+            guideListener.onShowGuide(holder.itemView, getItem(position));
+            showedGuide = true;
+        }
+    }
+
+    private void animate(@NonNull VH holder, int position) {
         if (isEnableAnimation() && position > lastKnowingPosition) {
+//            AnimationHelper.startBeatsAnimation(holder.itemView);
             lastKnowingPosition = position;
         }
     }
@@ -98,8 +138,32 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extend
         data.clear();
         data.addAll(items);
         notifyDataSetChanged();
+        progressAdded = false;
     }
 
+
+
+    public void addItem(M item, int position) {
+        data.add(position, item);
+        notifyItemInserted(position);
+    }
+
+    public void addItem(M item) {
+        removeProgress();
+        data.add(item);
+        if (data.size() == 0) {
+            notifyDataSetChanged();
+        } else {
+            notifyItemInserted(data.size() - 1);
+        }
+    }
+
+    @SuppressWarnings("WeakerAccess")
+    public void addItems(@NonNull List<M> items) {
+        removeProgress();
+        data.addAll(items);
+        notifyItemRangeInserted(getItemCount(), (getItemCount() + items.size()) - 1);
+    }
 
     @SuppressWarnings("WeakerAccess")
     public void removeItem(int position) {
@@ -107,13 +171,52 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extend
         notifyItemRemoved(position);
     }
 
+    public void removeItem(M item) {
+        int position = data.indexOf(item);
+        if (position != -1) removeItem(position);
+    }
+
+    public void removeItems(@NonNull List<M> items) {
+        int prevSize = getItemCount();
+        data.removeAll(items);
+        notifyItemRangeRemoved(prevSize, Math.abs(data.size() - prevSize));
+    }
+
+    public void swapItem(@NonNull M model) {
+        int index = getItem(model);
+        swapItem(model, index);
+    }
+
+    public void swapItem(@NonNull M model, int position) {
+        if (position != -1) {
+            data.set(position, model);
+            notifyItemChanged(position);
+        }
+    }
+
+    public void subList(int fromPosition, int toPosition) {
+        if (data.isEmpty()) return;
+        data.subList(fromPosition, toPosition).clear();
+        notifyItemRangeRemoved(fromPosition, toPosition);
+    }
+
+    public void clear() {
+        progressAdded = false;
+        data.clear();
+        notifyDataSetChanged();
+    }
+
     public boolean isEmpty() {
-        return !data.isEmpty();
+        return data.isEmpty();
+    }
+
+    public void setEnableAnimation(boolean enableAnimation) {
+        this.enableAnimation = enableAnimation;
+        notifyDataSetChanged();
     }
 
     @SuppressWarnings("WeakerAccess")
     public boolean isEnableAnimation() {
-        boolean enableAnimation = false;
         return enableAnimation;
     }
 
@@ -123,12 +226,48 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extend
         return listener;
     }
 
+    public void setListener(@Nullable P listener) {
+        this.listener = listener;
+        notifyDataSetChanged();
+    }
+
+    public void setGuideListener(GuideListener guideListener) {
+        this.guideListener = guideListener;
+    }
+
+    public int getRowWidth() {
+        return rowWidth;
+    }
+
+    public void setRowWidth(int rowWidth) {
+        if (this.rowWidth == 0) {
+            this.rowWidth = rowWidth;
+            notifyDataSetChanged();
+        }
+    }
+
+    private boolean isShowedGuide() {
+        return showedGuide;
+    }
+
+    public void addProgress() {
+        if (!progressAdded && !isEmpty()) {
+            addItem(null);
+            progressAdded = true;
+        }
+    }
+
+    public boolean isProgressAdded() {
+        return progressAdded;
+    }
+
     public void removeProgress() {
-        if (isEmpty()) {
+        if (!isEmpty()) {
             M m = getItem(getItemCount() - 1);
             if (m == null) {
                 removeItem(getItemCount() - 1);
             }
+            progressAdded = false;
         }
     }
 
@@ -146,5 +285,8 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder, P extend
         }
     }
 
+    public interface GuideListener<M> {
+        void onShowGuide(@NonNull View itemView, @NonNull M model);
+    }
 }
 

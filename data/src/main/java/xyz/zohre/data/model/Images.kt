@@ -1,7 +1,10 @@
 package xyz.zohre.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Images(
     @Json(name = "original") val original : Original,
     @Json(name = "downsized") val downsized : Downsized,
@@ -26,4 +29,4 @@ data class Images(
     @Json(name = "preview_gif") val preview_gif : Downsized,
     @Json(name = "preview_webp") val preview_webp : Downsized,
     @Json(name = "480w_still") val w480_still : Downsized
-)
+): Parcelable

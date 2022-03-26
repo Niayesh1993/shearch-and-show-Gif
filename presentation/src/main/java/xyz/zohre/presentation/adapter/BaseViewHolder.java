@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
-    @Nullable
-    protected final BaseRecyclerAdapter adapter;
+    @Nullable protected final BaseRecyclerAdapter adapter;
 
     public static View getView(@NonNull ViewGroup parent, @LayoutRes int layoutRes) {
         return LayoutInflater.from(parent.getContext()).inflate(layoutRes, parent, false);
@@ -34,7 +33,7 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implemen
         if (adapter != null && adapter.getListener() != null) {
             int position = getAdapterPosition();
             if (position != RecyclerView.NO_POSITION && position < adapter.getItemCount()) {
-                onViewClicked(position, getItem(position));
+                onViewClicked(position, v, getItem(position));
             }
         }
     }
@@ -51,13 +50,20 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implemen
         return true;
     }
 
+    public <V> V getView() {
+        return (V) itemView;
+    }
+
     public T getItem(int position) {
         return (T) adapter.getItem(position);
     }
 
     public abstract void bind(@NonNull T t);
 
-    protected void onViewClicked(int position, T item) {
+    protected void onViewIsDetaching() {
+    }
+
+    protected void onViewClicked(int position, View v, T item) {
         adapter.getListener().onItemClick(position, item);
     }
 
@@ -73,4 +79,3 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implemen
         }
     }
 }
-

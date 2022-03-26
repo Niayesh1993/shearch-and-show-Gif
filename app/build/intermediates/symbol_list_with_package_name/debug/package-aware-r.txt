@@ -1164,6 +1164,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color tail_blue
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color text_button_primary
@@ -1327,6 +1328,7 @@ dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
 dimen label
+dimen large_margin
 dimen line_height_button_primary
 dimen margin_default
 dimen material_emphasis_disabled
@@ -1334,6 +1336,7 @@ dimen material_emphasis_high_type
 dimen material_emphasis_medium
 dimen material_text_view_test_line_height
 dimen material_text_view_test_line_height_override
+dimen mid_margin
 dimen mtrl_alert_dialog_background_inset_bottom
 dimen mtrl_alert_dialog_background_inset_end
 dimen mtrl_alert_dialog_background_inset_start
@@ -1747,6 +1750,7 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
+id age_badge
 id alertTitle
 id aligned
 id all
@@ -1779,6 +1783,7 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
+id card_view
 id carryVelocity
 id center
 id center_horizontal
@@ -2066,6 +2071,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textView2
 id text_input_end_icon
 id text_input_start_icon
@@ -2170,6 +2176,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_gif_detail
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2353,6 +2360,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string random_gif
 string remote_error
+string search
 string search_menu_title
 string search_result
 string status_bar_notification_info_overflow

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.load.resource.gif.GifDrawable
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import kotlinx.android.synthetic.main.gif_item.view.*
@@ -25,6 +24,7 @@ class GifRecyclerAdapter: BaseRecyclerAdapter<GifData,
                      adapter: GifRecyclerAdapter,)
         : BaseViewHolder<GifData>(itemView, adapter){
         override fun bind(t: GifData) {
+
             bindImage(
                 imageUrl = t.images.fixed_width_small_still.url,
                 imageView = itemView.gifImageView,

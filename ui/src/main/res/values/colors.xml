@@ -3,5 +3,6 @@
     <color name="primary_black">#08090C</color>
     <color name="transparent">#E0DCDC</color>
     <color name="primary_blue">#5CB8E1</color>
+    <color name="tail_blue">#A0CCD2</color>
 
 </resources>

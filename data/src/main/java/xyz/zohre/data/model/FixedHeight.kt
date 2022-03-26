@@ -1,7 +1,10 @@
 package xyz.zohre.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class FixedHeight(
     @Json(name = "height") val height : Int,
     @Json(name = "width") val width : Int,
@@ -11,4 +14,4 @@ data class FixedHeight(
     @Json(name = "mp4") val mp4 : String,
     @Json(name = "webp_size") val webp_size : Int,
     @Json(name = "webp") val webp : String
-)
+): Parcelable

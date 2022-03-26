@@ -1,7 +1,10 @@
 package xyz.zohre.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class User(
     @Json(name = "avatar_url") val avatar_url : String,
     @Json(name = "banner_image") val banner_image : String,
@@ -13,4 +16,4 @@ data class User(
     @Json(name = "instagram_url") val instagram_url : String,
     @Json(name = "website_url") val website_url : String,
     @Json(name = "is_verified") val is_verified : Boolean
-)
+): Parcelable

@@ -1,6 +1,7 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="random_gif">Random selected Gif:</string>
-    <string name="gif_title">Gif Title:</string>
+    <string name="random_gif">Random selected GIF:</string>
+    <string name="gif_title">GIF Title</string>
     <string name="search_result">Search results:</string>
+    <string name="search">Search</string>
 </resources>
