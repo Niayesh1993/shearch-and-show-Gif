@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.progressbar
@@ -24,6 +25,7 @@ class SearchGifFragment : BaseFragment() {
     private var query: String? = null
     private val viewModel: SearchGifViewModel by getLazyViewModel()
     private val adapter = GifRecyclerAdapter()
+    private var offset = 0
 
     private var gifClickListener: BaseViewHolder.OnItemClickListener<GifData> =
         BaseViewHolder.OnItemClickListener { _, _gifData ->
@@ -53,12 +55,23 @@ class SearchGifFragment : BaseFragment() {
 
         gif_recycler.adapter = adapter
         gif_recycler.itemAnimator = DefaultItemAnimator()
-        val gridLayoutManager = GridLayoutManager(activity?.applicationContext, 3)
+        val gridLayoutManager = GridLayoutManager(activity?.applicationContext, COLUMN)
         gif_recycler.layoutManager = gridLayoutManager
         adapter.listener = gifClickListener
         initObservers()
-        query?.let { viewModel.searchGif(it) }
+        query?.let { viewModel.searchGif(it, offset) }
         progressbar.visibility = View.VISIBLE
+
+        gif_recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (!recyclerView.canScrollVertically(1)) {
+                    offset =+ 50
+                    query?.let { viewModel.searchGif(it, offset) }
+                }
+            }
+        })
 
     }
 
@@ -67,7 +80,8 @@ class SearchGifFragment : BaseFragment() {
             viewLifecycleOwner,
             {
                 progressbar.visibility = View.GONE
-                adapter.insertItems(it)
+                if (offset == 0) adapter.insertItems(it)
+                else adapter.addItems(it)
             }
         )
         viewModel.loading.observe(
@@ -85,11 +99,11 @@ class SearchGifFragment : BaseFragment() {
         )
     }
 
-
     companion object {
 
         private const val SEARCH_QUERY = "search_query"
         const val EXTRAS_GIF_DATA = "gif_data"
+        private const val COLUMN = 3
 
         @JvmStatic
         fun newInstance(param: String?) =

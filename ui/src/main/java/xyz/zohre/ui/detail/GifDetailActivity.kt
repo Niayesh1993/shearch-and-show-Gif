@@ -9,6 +9,7 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_gif_detail.*
+import kotlinx.android.synthetic.main.activity_gif_detail.age_badge
 import kotlinx.android.synthetic.main.activity_gif_detail.gifImageView
 import kotlinx.android.synthetic.main.activity_gif_detail.gifLink
 import kotlinx.android.synthetic.main.activity_gif_detail.gifTitle
@@ -37,9 +38,10 @@ class GifDetailActivity : AppCompatActivity() {
     private fun initView() {
 
         gifTitle.text = gifData.title
-        gifLink.text = gifData.images.fixed_height_downsampled.url
+        gifLink.text = gifData.images.fixed_height_downSampled.url
+        age_badge.text = gifData.rating
         bindImage(
-            imageUrl = gifData.images.fixed_height_downsampled.url,
+            imageUrl = gifData.images.fixed_height_downSampled.url,
             imageView = gifImageView,
             listener = object : RequestListener<Drawable> {
                 override fun onLoadFailed(

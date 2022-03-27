@@ -146,8 +146,10 @@
         <enum name="none" value="0"/>
         <enum name="chain" value="1"/>
         <enum name="aligned" value="2"/>
+        <enum name="chain2" value="3"/>
     </attr>
     <attr format="integer" name="framePosition"/>
+    <attr format="boolean" name="guidelineUseRtl"/>
     <attr format="dimension" name="height"/>
     <attr format="reference" name="hideMotionSpec"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -453,7 +455,6 @@
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
-    <color name="aqua_50">#7F00c2b5</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -464,7 +465,6 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
-    <color name="button_background">#00c2b5</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="cardview_dark_background">#FF424242</color>
@@ -527,7 +527,6 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <color name="light_grey">#dde0e2</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -552,7 +551,6 @@
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="primary_black">#08090C</color>
-    <color name="primary_blue">#5CB8E1</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -572,10 +570,8 @@
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="tail_blue">#A0CCD2</color>
-    <color name="text_button_primary">@color/white</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
-    <color name="transparent">#E0DCDC</color>
     <color name="white">#ffffff</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
@@ -656,8 +652,6 @@
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="action_bar_size">16dp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="appcompat_dialog_background_inset">16dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
@@ -734,8 +728,6 @@
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="label">14sp</dimen>
     <dimen name="large_margin">64dp</dimen>
-    <dimen name="line_height_button_primary">20sp</dimen>
-    <dimen name="margin_default">16dp</dimen>
     <item format="float" name="material_emphasis_disabled" type="dimen">0.38</item>
     <item format="float" name="material_emphasis_high_type" type="dimen">0.87</item>
     <item format="float" name="material_emphasis_medium" type="dimen">0.6</item>
@@ -911,7 +903,6 @@
     <dimen name="subtitle_shadow_offset">2dp</dimen>
     <dimen name="subtitle_shadow_radius">2dp</dimen>
     <dimen name="test_mtrl_calendar_day_cornerSize">52dp</dimen>
-    <dimen name="text_style_medium">15sp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -1066,6 +1057,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Picnic</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="back_previous">back To previous page</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
@@ -1141,6 +1133,7 @@
     <string name="search">Search</string>
     <string name="search_menu_title">Search</string>
     <string name="search_result">Search results:</string>
+    <string name="show_animated_gif">Show animated GIF</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="unknown_error">An Unexpected error happened</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -5992,6 +5985,7 @@
         <attr name="layout_constraintGuide_begin"/>
         <attr name="layout_constraintGuide_end"/>
         <attr name="layout_constraintGuide_percent"/>
+        <attr name="guidelineUseRtl"/>
         <attr name="layout_constraintLeft_toLeftOf"/>
         <attr name="layout_constraintLeft_toRightOf"/>
         <attr name="layout_constraintRight_toLeftOf"/>
@@ -6154,6 +6148,7 @@
         <attr name="layout_constraintGuide_begin"/>
         <attr name="layout_constraintGuide_end"/>
         <attr name="layout_constraintGuide_percent"/>
+        <attr name="guidelineUseRtl"/>
         <attr name="layout_constraintLeft_toLeftOf"/>
         <attr name="layout_constraintLeft_toRightOf"/>
         <attr name="layout_constraintRight_toLeftOf"/>
@@ -6314,6 +6309,7 @@
         <attr name="layout_constraintGuide_begin"/>
         <attr name="layout_constraintGuide_end"/>
         <attr name="layout_constraintGuide_percent"/>
+        <attr name="guidelineUseRtl"/>
 
         <attr name="layout_goneMarginLeft"/>
         <attr name="layout_goneMarginTop"/>
@@ -6449,6 +6445,8 @@
         <attr name="layout_constraintGuide_begin"/>
         <attr name="layout_constraintGuide_end"/>
         <attr name="layout_constraintGuide_percent"/>
+        <attr name="guidelineUseRtl"/>
+
         <attr name="layout_constraintLeft_toLeftOf"/>
         <attr name="layout_constraintLeft_toRightOf"/>
         <attr name="layout_constraintRight_toLeftOf"/>
@@ -7065,6 +7063,7 @@
         <attr name="layout_constraintGuide_begin"/>
         <attr name="layout_constraintGuide_end"/>
         <attr name="layout_constraintGuide_percent"/>
+        <attr name="guidelineUseRtl"/>
         <attr name="layout_constraintLeft_toLeftOf"/>
         <attr name="layout_constraintLeft_toRightOf"/>
         <attr name="layout_constraintRight_toLeftOf"/>

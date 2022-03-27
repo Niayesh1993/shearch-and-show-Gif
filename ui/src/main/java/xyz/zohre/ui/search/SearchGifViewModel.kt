@@ -9,6 +9,7 @@ import kotlinx.coroutines.launch
 import xyz.zohre.data.discovery.search.SearchGifRepository
 import xyz.zohre.data.model.GifData
 import xyz.zohre.data.model.Giphy
+import xyz.zohre.data.model.SearchInput
 import xyz.zohre.domain.entities.ApiResult
 import xyz.zohre.presentation.Event
 import xyz.zohre.presentation.TextData
@@ -27,11 +28,12 @@ class SearchGifViewModel@Inject constructor(val searchGifRepository: SearchGifRe
     val loading: LiveData<Boolean> get() = _loading
 
 
-    fun searchGif(query: String) {
+    fun searchGif(query: String, offset: Int) {
 
+        val parameter = SearchInput(offset, query)
         viewModelScope.launch {
 
-            searchGifRepository(query).collect {
+            searchGifRepository(parameter).collect {
                 showResult(it)
             }
 
@@ -39,7 +41,7 @@ class SearchGifViewModel@Inject constructor(val searchGifRepository: SearchGifRe
     }
 
     private fun showResult(result: ApiResult<Giphy>) {
-        when (result) {
+       when (result) {
             is ApiResult.Success -> {
                 _gifs.value = result.data.data
             }

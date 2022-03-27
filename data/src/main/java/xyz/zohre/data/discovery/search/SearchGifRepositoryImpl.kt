@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.Response
 import xyz.zohre.data.discovery.GifDataSource
 import xyz.zohre.data.model.Giphy
+import xyz.zohre.data.model.SearchInput
 import xyz.zohre.domain.DefaultDispatcher
 import xyz.zohre.domain.IoDispatcher
 import xyz.zohre.domain.entities.ApiResult
@@ -22,17 +23,17 @@ class SearchGifRepositoryImpl@Inject constructor(
     val ioDispatcher: CoroutineDispatcher
 ): SearchGifRepository
 {
-    override suspend fun execute(parameters: String): Flow<ApiResult<Giphy>> {
+    override suspend fun execute(parameters: SearchInput): Flow<ApiResult<Giphy>> {
         var remoteResponse: Response<Giphy>? = null
         return flow {
             // start async request so we could use network while we loading from cache
             val remoteDeferred = CoroutineScope((ioDispatcher)).async {
-                remoteResponse = remote.searchGif(parameters)
+                remoteResponse = remote.searchGif(parameters.query, parameters.offset)
             }
             // wait for remote call to complete and emit result
             remoteDeferred.await()
             if (remoteResponse?.isSuccessful == false) {
-                emit(ApiResult.Error(RemoteCallException(remoteResponse!!.errorBody()?.string())))
+                emit(ApiResult.Error(RemoteCallException(message = remoteResponse!!.errorBody().toString())))
                 return@flow
             }
             val remoteVenues = remoteResponse?.body()
@@ -41,4 +42,6 @@ class SearchGifRepositoryImpl@Inject constructor(
             }
         }
     }
+
+
 }

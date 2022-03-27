@@ -1,7 +1,8 @@
 <resources>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="random_gif">Random selected GIF:</string>
     <string name="gif_title">GIF Title</string>
     <string name="search_result">Search results:</string>
     <string name="search">Search</string>
+    <string name="back_previous">back To previous page</string>
+    <string name="show_animated_gif">Show animated GIF</string>
 </resources>

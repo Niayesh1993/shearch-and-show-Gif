@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.Response
 import xyz.zohre.data.discovery.GifDataSource
-import xyz.zohre.data.model.Giphy
 import xyz.zohre.data.model.RandomGiphy
 import xyz.zohre.domain.DefaultDispatcher
 import xyz.zohre.domain.IoDispatcher
@@ -33,7 +32,7 @@ class RandomGifRepositoryImpl@Inject constructor(
             // wait for remote call to complete and emit result
             remoteDeferred.await()
             if (remoteResponse?.isSuccessful == false) {
-                emit(ApiResult.Error(RemoteCallException(remoteResponse!!.errorBody()?.string())))
+                emit(ApiResult.Error(RemoteCallException(message = remoteResponse!!.errorBody().toString())))
                 return@flow
             }
             val remoteVenues = remoteResponse?.body()

@@ -55,10 +55,10 @@ class RandomGifFragment : BaseFragment() {
             {
                 progressbar.visibility = View.GONE
                 gifTitle.text = it.gifData.title
-                gifLink.text = it.gifData.images.fixed_height_downsampled.url
-                age_badge.tag = it.gifData.rating
+                gifLink.text = it.gifData.images.fixed_height_downSampled.url
+                age_badge.text = it.gifData.rating
                 bindImage(
-                    imageUrl = it.gifData.images.fixed_height_downsampled.url,
+                    imageUrl = it.gifData.images.fixed_height_downSampled.url,
                     imageView = gifImageView,
                     listener = object : RequestListener<Drawable> {
                         override fun onLoadFailed(

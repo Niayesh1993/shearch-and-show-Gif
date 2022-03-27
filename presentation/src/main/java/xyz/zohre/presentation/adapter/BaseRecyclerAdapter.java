@@ -18,7 +18,7 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
     private final static int PROGRESS_TYPE = 2017;
 
     @NonNull
-    private List<M> data;
+    private final List<M> data;
     @Nullable
     private P listener;
     private int lastKnowingPosition = -1;
@@ -109,7 +109,6 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
 
     @Override
     public void onViewDetachedFromWindow(@NonNull VH holder) {
-        holder.onViewIsDetaching();
         super.onViewDetachedFromWindow(holder);
     }
 
@@ -207,7 +206,7 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
     }
 
     public boolean isEmpty() {
-        return data.isEmpty();
+        return !data.isEmpty();
     }
 
     public void setEnableAnimation(boolean enableAnimation) {
@@ -251,7 +250,7 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
     }
 
     public void addProgress() {
-        if (!progressAdded && !isEmpty()) {
+        if (!progressAdded && isEmpty()) {
             addItem(null);
             progressAdded = true;
         }
@@ -262,7 +261,7 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
     }
 
     public void removeProgress() {
-        if (!isEmpty()) {
+        if (isEmpty()) {
             M m = getItem(getItemCount() - 1);
             if (m == null) {
                 removeItem(getItemCount() - 1);

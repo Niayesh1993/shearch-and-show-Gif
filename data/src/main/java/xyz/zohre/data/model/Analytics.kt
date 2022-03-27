@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Analytics(
-    @Json(name = "onload") val onload : onLoadUrl,
-    @Json(name = "onclick") val onclick : onLoadUrl,
-    @Json(name = "onsent") val onsent : onLoadUrl
+    @Json(name = "onload") val onLoad : OnLoadUrl,
+    @Json(name = "onclick") val onclick : OnLoadUrl,
+    @Json(name = "onsent") val onSent : OnLoadUrl
 ): Parcelable

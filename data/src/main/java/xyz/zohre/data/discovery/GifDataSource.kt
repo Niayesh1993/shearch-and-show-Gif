@@ -20,6 +20,7 @@ interface GifDataSource {
     @GET("/v1/gifs/search")
     suspend fun searchGif(
         @Query("q") quest: String,
+        @Query("offset") page: Int,
         @Query("api_key") api_key: String = API_KEY
     ): Response<Giphy>
 
