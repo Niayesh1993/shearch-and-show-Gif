@@ -18,8 +18,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/gifImageView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/Image_fixed_size"
+            android:layout_height="@dimen/Image_fixed_size"
             android:layout_margin="@dimen/small_margin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

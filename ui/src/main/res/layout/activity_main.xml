@@ -10,51 +10,51 @@
 
     <ImageButton
         android:id="@+id/backBtn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/fixed_size"
+        android:layout_height="@dimen/fixed_size"
         android:layout_marginStart="@dimen/mid_margin"
         android:background="@color/white"
+        android:contentDescription="@string/back_previous"
         android:src="@drawable/ic_arrow_left_black"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333"
-        android:visibility="gone"
-        android:contentDescription="@string/back_previous" />
+        app:layout_constraintVertical_bias="0.342" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
         android:layout_marginTop="@dimen/mid_margin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="@dimen/radius"
-        android:layout_margin="@dimen/normal_margin">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
+        app:layout_constraintTop_toTopOf="parent">
+
         <SearchView
             android:id="@+id/searchView"
-            android:layout_width="273dp"
-            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/tail_blue"
-            android:queryHint="@string/search"
-            android:iconifiedByDefault="false"
             android:focusable="false"
+            android:iconifiedByDefault="false"
             android:queryBackground="@null"
-            />
+            android:queryHint="@string/search" />
 
     </androidx.cardview.widget.CardView>
 
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="637dp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/small_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view"
-        app:layout_constraintVertical_bias="0.505">
+        app:layout_constraintVertical_bias="0.029">
 
     </FrameLayout>
 

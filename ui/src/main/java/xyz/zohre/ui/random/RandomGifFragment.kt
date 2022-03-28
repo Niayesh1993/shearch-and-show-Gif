@@ -56,6 +56,7 @@ class RandomGifFragment : BaseFragment() {
                 progressbar.visibility = View.GONE
                 gifTitle.text = it.gifData.title
                 gifLink.text = it.gifData.images.fixed_height_downSampled.url
+                age_badge.visibility = View.VISIBLE
                 age_badge.text = it.gifData.rating
                 bindImage(
                     imageUrl = it.gifData.images.fixed_height_downSampled.url,

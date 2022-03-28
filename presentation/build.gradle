@@ -8,7 +8,7 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 26
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
@@ -36,7 +36,7 @@ dependencies {
 
     implementation dependenciesList.kotlinStdlib
     implementation dependenciesList.hiltAndroid
-    implementation 'androidx.databinding:databinding-common:7.0.3'
+    implementation 'androidx.databinding:databinding-common:7.1.2'
     implementation project(path: ':domain')
     kapt dependenciesList.hiltCompiler
     implementation dependenciesList.kotlinKTX

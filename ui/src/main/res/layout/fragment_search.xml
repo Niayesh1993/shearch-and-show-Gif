@@ -8,34 +8,32 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="374dp"
-        android:layout_height="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/normal_margin"
         android:padding="@dimen/padding_size"
         android:text="@string/search_result"
-        app:layout_constraintBottom_toTopOf="@+id/gif_recycler"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gif_recycler"
         android:layout_width="match_parent"
-        android:layout_height="579dp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/small_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
         android:id="@+id/progressbar"
         style="?android:attr/progressBarStyleLarge"
-        android:layout_width="337dp"
-        android:layout_height="68dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

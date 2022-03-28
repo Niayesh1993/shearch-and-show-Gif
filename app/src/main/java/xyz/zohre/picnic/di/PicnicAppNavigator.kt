@@ -14,7 +14,7 @@ class PicnicAppNavigator@Inject constructor(@ActivityContext private val activit
     AppNavigator {
     override fun navigateTo(appPage: AppPage, quest: String?) {
         when (appPage) {
-            is AppPage.HomePage -> {
+            is AppPage.RandomPage -> {
                 (activity as AppCompatActivity).supportFragmentManager.beginTransaction()
                     .replace(R.id.container, RandomGifFragment.newInstance()).
                     commit()

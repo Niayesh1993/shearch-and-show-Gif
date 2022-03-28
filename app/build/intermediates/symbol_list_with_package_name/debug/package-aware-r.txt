@@ -1167,6 +1167,7 @@ color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
 color white
+dimen Image_fixed_size
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1309,6 +1310,8 @@ dimen disabled_alpha_material_light
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen fixed_height_size
+dimen fixed_size
 dimen header
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark

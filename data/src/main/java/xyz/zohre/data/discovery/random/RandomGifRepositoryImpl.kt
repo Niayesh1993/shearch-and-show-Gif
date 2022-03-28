@@ -25,7 +25,7 @@ class RandomGifRepositoryImpl@Inject constructor(
     override suspend fun execute(parameters: Any): Flow<ApiResult<RandomGiphy>> {
         var remoteResponse: Response<RandomGiphy>? = null
         return flow {
-            // start async request so we could use network while we loading from cache
+            // start async request so we could use network
             val remoteDeferred = CoroutineScope((ioDispatcher)).async {
                 remoteResponse = remote.randomGif()
             }

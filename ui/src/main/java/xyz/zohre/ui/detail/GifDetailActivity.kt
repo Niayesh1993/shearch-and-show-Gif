@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_gif_detail.age_badge
 import kotlinx.android.synthetic.main.activity_gif_detail.gifImageView
 import kotlinx.android.synthetic.main.activity_gif_detail.gifLink
 import kotlinx.android.synthetic.main.activity_gif_detail.gifTitle
-import kotlinx.android.synthetic.main.fragment_random.*
 import xyz.zohre.data.model.GifData
 import xyz.zohre.presentation.bindImage
 import xyz.zohre.ui.R

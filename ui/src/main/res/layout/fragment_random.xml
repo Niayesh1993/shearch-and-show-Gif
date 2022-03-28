@@ -9,7 +9,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/small_margin"
         android:layout_marginBottom="@dimen/mid_margin"
         android:text="@string/random_gif"
@@ -42,15 +42,15 @@
         android:textColor="@color/primary_black"
         android:textSize="@dimen/label"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifImageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
 
     <ProgressBar
         android:id="@+id/progressbar"
         style="?android:attr/progressBarStyleLarge"
-        android:layout_width="337dp"
-        android:layout_height="68dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/large_margin"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,31 +61,34 @@
 
     <TextView
         android:id="@+id/gifLink"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/small_margin"
-        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
         android:padding="@dimen/padding_size"
         android:textSize="@dimen/label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/age_badge"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/gifTitle"
+        app:layout_constraintVertical_bias="0.025" />
 
     <TextView
         android:id="@+id/age_badge"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/fixed_size"
+        android:layout_height="@dimen/fixed_size"
+        android:layout_margin="@dimen/small_margin"
         android:background="@drawable/circular_style"
+        android:gravity="center"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="@dimen/small_margin"
-        android:gravity="center"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifLink"
-        app:layout_constraintVertical_bias="0.034"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/gifTitle"
+        app:layout_constraintVertical_bias="0.047" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

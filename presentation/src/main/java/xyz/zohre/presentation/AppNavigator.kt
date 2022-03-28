@@ -5,6 +5,6 @@ interface AppNavigator {
 }
 
 sealed class AppPage {
-    object HomePage : AppPage()
+    object RandomPage : AppPage()
     object SearchPage : AppPage()
 }

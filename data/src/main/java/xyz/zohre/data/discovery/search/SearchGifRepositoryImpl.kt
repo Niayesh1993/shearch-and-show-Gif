@@ -26,7 +26,7 @@ class SearchGifRepositoryImpl@Inject constructor(
     override suspend fun execute(parameters: SearchInput): Flow<ApiResult<Giphy>> {
         var remoteResponse: Response<Giphy>? = null
         return flow {
-            // start async request so we could use network while we loading from cache
+            // start async request so we could use network
             val remoteDeferred = CoroutineScope((ioDispatcher)).async {
                 remoteResponse = remote.searchGif(parameters.query, parameters.offset)
             }

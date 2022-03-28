@@ -3,13 +3,13 @@ package xyz.zohre.presentation.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder
+        implements View.OnClickListener, View.OnLongClickListener {
 
     @Nullable protected final BaseRecyclerAdapter adapter;
 
@@ -38,7 +38,6 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implemen
         }
     }
 
-
     @Override
     public boolean onLongClick(View v) {
         if (adapter != null && adapter.getListener() != null) {
@@ -55,18 +54,25 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implemen
     }
 
     public T getItem(int position) {
+
         return (T) adapter.getItem(position);
+
     }
 
     public abstract void bind(@NonNull T t);
 
-
     protected void onViewClicked(int position, View v, T item) {
-        adapter.getListener().onItemClick(position, item);
+        assert adapter != null;
+        if (adapter.getListener() != null) {
+            adapter.getListener().onItemClick(position, item);
+        }
     }
 
     protected void onViewLongClick(int position, View v, T item) {
-        adapter.getListener().onItemLongClick(position, v, item);
+        if (adapter != null) {
+            assert adapter.getListener() != null;
+            adapter.getListener().onItemLongClick(position, v, item);
+        }
     }
 
     public interface OnItemClickListener<T> {

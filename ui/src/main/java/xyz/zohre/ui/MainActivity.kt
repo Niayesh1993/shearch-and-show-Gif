@@ -20,13 +20,14 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         setContentView(R.layout.activity_main)
 
         searchView.setOnQueryTextListener(this)
+
         backBtn.setOnClickListener {
-            appNavigator.navigateTo(AppPage.HomePage)
+            appNavigator.navigateTo(AppPage.RandomPage)
             searchView.clearFocus()
             backBtn.visibility = View.GONE
         }
 
-        appNavigator.navigateTo(AppPage.HomePage)
+        appNavigator.navigateTo(AppPage.RandomPage)
     }
 
     override fun onQueryTextSubmit(query: String?): Boolean {

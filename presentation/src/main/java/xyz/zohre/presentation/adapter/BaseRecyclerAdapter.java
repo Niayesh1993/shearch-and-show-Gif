@@ -3,13 +3,11 @@ package xyz.zohre.presentation.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,11 +20,8 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
     @Nullable
     private P listener;
     private int lastKnowingPosition = -1;
-    private boolean enableAnimation = false;
     private boolean showedGuide;
     private GuideListener guideListener;
-    private boolean progressAdded;
-    private int rowWidth;
 
     protected BaseRecyclerAdapter() {
         this(new ArrayList<>());
@@ -41,10 +36,6 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
         this.listener = listener;
     }
 
-    protected BaseRecyclerAdapter(@Nullable P listener) {
-        this(new ArrayList<>(), listener);
-    }
-
     protected abstract VH viewHolder(ViewGroup parent, int viewType);
 
     protected void onBindView(VH holder, int position){
@@ -56,16 +47,8 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
         return data;
     }
 
-    public M getItemByPosition(int position) {
-        return data.get(position);
-    }
-
     public M getItem(int position) {
         return data.get(position);
-    }
-
-    public int getItem(M t) {
-        return data.indexOf(t);
     }
 
     @SuppressWarnings("unchecked")
@@ -128,7 +111,6 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
 
     private void animate(@NonNull VH holder, int position) {
         if (isEnableAnimation() && position > lastKnowingPosition) {
-//            AnimationHelper.startBeatsAnimation(holder.itemView);
             lastKnowingPosition = position;
         }
     }
@@ -137,24 +119,6 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
         data.clear();
         data.addAll(items);
         notifyDataSetChanged();
-        progressAdded = false;
-    }
-
-
-
-    public void addItem(M item, int position) {
-        data.add(position, item);
-        notifyItemInserted(position);
-    }
-
-    public void addItem(M item) {
-        removeProgress();
-        data.add(item);
-        if (data.size() == 0) {
-            notifyDataSetChanged();
-        } else {
-            notifyItemInserted(data.size() - 1);
-        }
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -170,53 +134,13 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
         notifyItemRemoved(position);
     }
 
-    public void removeItem(M item) {
-        int position = data.indexOf(item);
-        if (position != -1) removeItem(position);
-    }
-
-    public void removeItems(@NonNull List<M> items) {
-        int prevSize = getItemCount();
-        data.removeAll(items);
-        notifyItemRangeRemoved(prevSize, Math.abs(data.size() - prevSize));
-    }
-
-    public void swapItem(@NonNull M model) {
-        int index = getItem(model);
-        swapItem(model, index);
-    }
-
-    public void swapItem(@NonNull M model, int position) {
-        if (position != -1) {
-            data.set(position, model);
-            notifyItemChanged(position);
-        }
-    }
-
-    public void subList(int fromPosition, int toPosition) {
-        if (data.isEmpty()) return;
-        data.subList(fromPosition, toPosition).clear();
-        notifyItemRangeRemoved(fromPosition, toPosition);
-    }
-
-    public void clear() {
-        progressAdded = false;
-        data.clear();
-        notifyDataSetChanged();
-    }
-
     public boolean isEmpty() {
         return !data.isEmpty();
     }
 
-    public void setEnableAnimation(boolean enableAnimation) {
-        this.enableAnimation = enableAnimation;
-        notifyDataSetChanged();
-    }
-
     @SuppressWarnings("WeakerAccess")
     public boolean isEnableAnimation() {
-        return enableAnimation;
+        return false;
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -230,34 +154,8 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
         notifyDataSetChanged();
     }
 
-    public void setGuideListener(GuideListener guideListener) {
-        this.guideListener = guideListener;
-    }
-
-    public int getRowWidth() {
-        return rowWidth;
-    }
-
-    public void setRowWidth(int rowWidth) {
-        if (this.rowWidth == 0) {
-            this.rowWidth = rowWidth;
-            notifyDataSetChanged();
-        }
-    }
-
     private boolean isShowedGuide() {
         return showedGuide;
-    }
-
-    public void addProgress() {
-        if (!progressAdded && isEmpty()) {
-            addItem(null);
-            progressAdded = true;
-        }
-    }
-
-    public boolean isProgressAdded() {
-        return progressAdded;
     }
 
     public void removeProgress() {
@@ -266,7 +164,6 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
             if (m == null) {
                 removeItem(getItemCount() - 1);
             }
-            progressAdded = false;
         }
     }
 
@@ -274,6 +171,7 @@ public abstract class BaseRecyclerAdapter<M, VH extends BaseViewHolder<M>, P ext
         if (parent instanceof RecyclerView) {
             if (((RecyclerView) parent).getLayoutManager() instanceof GridLayoutManager) {
                 GridLayoutManager layoutManager = ((GridLayoutManager) ((RecyclerView) parent).getLayoutManager());
+                assert layoutManager != null;
                 layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
                     @Override
                     public int getSpanSize(int position) {
