@@ -51,7 +51,6 @@ dependencies {
     implementation dependenciesList.constraintlayout
     implementation dependenciesList.lifecycleLiveData
     implementation dependenciesList.lifecycleViewModel
-    implementation dependenciesList.playServicesLocation
     implementation dependenciesList.multidex
     implementation dependenciesList.hiltAndroid
     implementation dependenciesList.coroutine

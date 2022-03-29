@@ -59,32 +59,17 @@
 34-->[:ui] E:\picnic-android-Niayesh1993\ui\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:27-74
 35            </intent-filter>
 36        </activity>
-37        <activity
-37-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\13749e97760942b33e99db0478ce430d\play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-38            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-38-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\13749e97760942b33e99db0478ce430d\play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-39            android:exported="false"
-39-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\13749e97760942b33e99db0478ce430d\play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-40            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-40-->[com.google.android.gms:play-services-base:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\13749e97760942b33e99db0478ce430d\play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-41
-42        <meta-data
-42-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\e036d736de1efc7a63db2a5f1b6d2433\play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-43            android:name="com.google.android.gms.version"
-43-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\e036d736de1efc7a63db2a5f1b6d2433\play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
-44            android:value="@integer/google_play_services_version" />
-44-->[com.google.android.gms:play-services-basement:17.5.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\e036d736de1efc7a63db2a5f1b6d2433\play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-45
-46        <provider
-46-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-47            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-47-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-48            android:authorities="xyz.zohre.picnic.lifecycle-process"
-48-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-49            android:exported="false"
-49-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-50            android:multiprocess="true" />
-50-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-51    </application>
-52
-53</manifest>
+37
+38        <provider
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+40            android:authorities="xyz.zohre.picnic.lifecycle-process"
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+41            android:exported="false"
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+42            android:multiprocess="true" />
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] D:\envision-android-assignment\caches\transforms-2\files-2.1\3b2c939df8e88dd8966418238f1425a2\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+43    </application>
+44
+45</manifest>
