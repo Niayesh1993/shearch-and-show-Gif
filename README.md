@@ -103,7 +103,7 @@ On the other hand, Coroutine is lighter than Rx. It's native and somehow
 it's easier to test because Google has created some libraries for that.
 
 
-##Glide
+## Glide
 
 For the loading Gif, I prefer using glide to catch the data from the URL and handle error
 it's a powerful library for loading images/gifs on android
